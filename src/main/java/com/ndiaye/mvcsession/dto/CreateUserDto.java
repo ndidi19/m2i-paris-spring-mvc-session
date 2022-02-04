@@ -4,15 +4,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.math.BigDecimal;
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class CartItem {
+public class CreateUserDto {
 
-    private Long productId;
-    private String label;
-    private int quantity;
-    private BigDecimal price;
+    private String firstname;
+    private String lastname;
+    private String email;
+    private String password;
 }

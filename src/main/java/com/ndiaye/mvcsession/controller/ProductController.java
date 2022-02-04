@@ -1,5 +1,6 @@
 package com.ndiaye.mvcsession.controller;
 
+import com.ndiaye.mvcsession.dto.CartItem;
 import com.ndiaye.mvcsession.service.ProductService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,6 +20,7 @@ public class ProductController {
     @RequestMapping(value = "/product/{id}", method = RequestMethod.GET)
     public String getProductById(Model model, @PathVariable Long id) {
         model.addAttribute("product", productService.getProductById(id));
+        model.addAttribute("cartItem", new CartItem());
         return "products/product";
     }
 }

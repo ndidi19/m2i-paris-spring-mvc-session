@@ -12,7 +12,7 @@
         <p>
             Price : <span th:text="${product.price}"></span>
         </p>
-        <form class="user" th:action="@{/cart/add/{id}(id=${product.id})}" th:object="${cartItem}">
+        <form class="user" th:action="@{/cart/add/{id}(id=${product.id})}" th:object="${cartItem}" method="post">
             <div class="form-group row">
                 <div class="col-sm-6 mb-3 mb-sm-0">
                     <select th:field="*{quantity}">
